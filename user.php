@@ -1,0 +1,145 @@
+<?php 
+
+session_start();
+
+if (!isset($_SESSION['name'])) {
+    header("Location: login.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Apartment sale and buy - home</title>
+    
+    <!-- link to css-->
+    <link rel="stylesheet" href="home%20style.css">
+    
+    <!-- java script-->
+    <script src="script%20home.js"></script>
+
+    <!--Box icon -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+</head>
+
+<body>
+     <header>
+        <div class="nav container">
+            
+            <a href="home.html" class="logo"><i class='bx bx-home' ></i>Paradise Cottage.lk</a>
+            
+            <input type="checkbox" name="" id="menu">
+            <label for="menu"><i class='bx bx-menu' ></i></label>
+    <ul class="navbar">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us </a></li>
+        <li><a href="category.html">Category</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="user.html" class="actives">User Account</a></li>
+    </ul>
+    <!--add cart-->
+        <li><a href="cart.html" class="btn_c"><i class='bx bxs-cart-add'></i></a></li>
+            <!--add pay-->
+        <li><a href="payment.html" class="btn_p"><i class='bx bx-credit-card'></i></a></li> 
+    <!--logOut bt-->
+        <a href="logout.php" class="btn">Log Out</a>
+        </div>
+        <div class="box">
+      <i class='bx bx-user-circle'></i>
+      <center>
+   
+        <?php echo "<h1>Welcome " . $_SESSION['name'] . "</h1>"; ?>
+        <br>
+        <hr>
+        <?php echo "<h3>Name&nbsp;&nbsp;&nbsp;:- " . $_SESSION['name'] . "</h3>"; ?>
+        <?php echo "<h3>E-Mail       :-" . $_SESSION['mail'] . "</h3>"; ?>
+        <?php echo "<h3>Phone Number :-" . $_SESSION['phone'] . "</h3>"; ?>
+        <?php echo "<h3>Gender       :-" . $_SESSION['gender'] . "</h3>"; ?>
+
+        
+      </center>
+        </div>
+
+</body>
+
+
+
+      
+        
+        </div>
+    </header>
+    
+    <div class="pc_img">
+              <img src="lk.jpg.png" alt="" class="pc_img">
+            </div>
+    
+    
+    
+    
+    
+    
+    <i class='bx bxs-user'></i>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--Footer-->
+<section class="footer">
+    <div class="footer-container container">
+        <h2><br><br>Paradise Cottage.lk<br><h10>Our Home is Your Home</h10></h2>
+        <div class="footer-box">
+            <h3><br><br>Quick links</h3>
+            <a href="#"><i class='bx bx-home-smile' ></i> Agency</a>
+            <a href="category.html"><i class='bx bx-building-house' ></i> Building</a>
+            <a href="#">Rates <i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star-half' ></i></a>
+        </div>
+        <div class="footer-box">
+            <h3><br><br>Locations</h3>
+            <a href="#"><i class='bx bx-location-plus' ></i> Colombo</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Baththramulla</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Mathra</a>
+        </div>
+        <div class="footer-box">
+            <h3><br><br>Contacts</h3>
+            <a href="#"><i class='bx bx-phone-call' ></i>  +94 312 234 476</a>
+            <a href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=CllgCJfrLfwMrDLmwnPbrFlthmVCwdxMblVGvLnnHwMgfMQkBtmsRndqqmGXtNHwCZJWFhHRrcL"><i class='bx bx-envelope' ></i> paradisecottage.lk@gmail.com</a>
+            <div class="social">
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/i/flow/login"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bx-qr'></i></a> 
+            </div>
+        </div>
+    </div>  
+</section>
+
+<!--copyright-->
+    <div class="copyright">
+        <p>&#169; Paradise Cottage.lk All Right Reserved 2022</p>
+    
+    </div>
+    
+
+
+</body>
+
+
+</html>
