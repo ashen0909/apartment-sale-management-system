@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>payment</title>
+
+    <!-- java script-->
+    <script src="payment.js"></script> 
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top:4rem; 
+    list-style: none;
+    text-decoration: none;  
+}
+:root{
+    --main-color:cadetblue;
+    --second-color:#192f6a;
+    --text-color:#324862;
+    --bg-color:#fff;
+     
+}
+--box-shadow:2px 2px 18px rgb(14 52 54 /15%);
+
+.body{
+    color:var(--text-color);; 
+}
+.section{
+    padding: 4.5rem 0 3rem;
+}
+.container{
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    display: block;
+    width: 100%;
+    background: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: var(--text-color);
+    font-size: irem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 1rem 1rem 1rem 1rem;
+    
+}
+.navbar a:hover{
+   color: var(--main-color); 
+}
+.navbar a.active {
+  background-color: cadetblue;
+  color: white;
+}   
+ .container_p{
+        display: flex;
+        margin-left:310px;;    
+        padding:25px;
+        margin-top: 100px;    
+        
+      }
+      
+      .container_p form{
+        padding:20px;
+        width:700px;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+      }
+      .card{
+          background-image: url(img/CreditCard.png);
+          width:1440px;
+          height: 950px;
+          margin-left: 45px;
+          border-radius: 2rem 2rem 2rem 2rem;
+      }
+      .container_p form .row{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap:15px;
+      }
+      
+      .container_p form .row .col{
+        flex:1 1 250px;
+      }
+      
+      .container_p form .row .col .title{
+        font-size: 20px;
+        color:#333;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+      }
+      
+      .container_p form .row .col .inputBox{
+        margin:15px 0;
+      }
+      
+      .container_p form .row .col .inputBox span{
+        margin-bottom: 10px;
+        display: block;
+      }
+      
+      .container_p form .row .col .inputBox input{
+        width: 100%;
+        border:1px solid #ccc;
+        padding:10px 15px;
+        font-size: 15px;
+        text-transform: none;
+      }
+      
+      .container_p form .row .col .inputBox input:focus{
+        border:1px solid #000;
+      }
+      
+      .container_p form .row .col .flex{
+        display: flex;
+        column-gap:15px;
+      }
+      
+      .container_p form .row .col .flex .inputBox{
+        margin-top: 5px;
+      }
+      
+      .container_p form .row .col .inputBox img{
+        height: 34px;
+        margin-top: 5px;
+        filter: drop-shadow(0 0 1px #000);
+      }
+      
+      .container_p form .submit-btn{
+        width: 100%;
+        padding:12px;
+        font-size: 17px;
+        background:var(--main-color);
+        color:#fff;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      
+      .container_p form .submit-btn:hover{
+        background: #3492fd;
+      }
+      .btn_p{
+    padding: 8px 22px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 5rem;
+    font-size: 20px;
+}
+.btn_p:hover{
+    background: #3492fd;
+}
+/*footer*/
+.footer{
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem 4rem 0 0;
+    margin-top: 100px;
+    margin-bottom: -60px;
+    
+}
+.footer-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    column-gap: 2rem;
+   
+}
+.footer-container h2{
+    font-size: 1.7rem;
+    font-weight: 500;  
+    margin-left: 20px;
+
+}
+.footer-container h10{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.footer-box{
+    display: grid;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.footer-box h3{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.footer-box a{
+    font-size: 0.8rem;
+    color: var(--bg-color);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+.footer-box a:hover{
+    color: var(--text-color);
+}
+.social a{
+    font-size:20px;
+    margin-right: 1rem
+}
+.social a:hover{
+    color: var(--second-color);
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+      </style>  
+</head>    
+<body>
+    <header>
+        <div class="nav container">
+            <a href="home.html"class="logo"><i class='bx bx-home' ></i>Paradise Cottage.lk</a>
+                    
+            <input type="checkbox" name="" id="menu">
+            <label for="menu"><i class='bx bx-menu' ></i></label>
+    <ul class="navbar">
+        <li><a href="index.php" >Home</a></li>
+        <li><a href="about.html">About Us </a></li>
+        <li><a href="category.html">Category</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="user.php">User Account</a></li>
+    </ul>
+    <!--add cart-->
+        <li><a href="cart.html" class="btn_c"><i class='bx bxs-cart-add'></i></a></li>
+            <!--add pay-->
+        <li><a href="payment.html" class="btn_p"><i class='bx bx-credit-card'></i></a></li> 
+       
+          </div>
+    </header><div class="card">
+    <div class="pc_img">
+              <img src="img/lk.jpg.png" alt="" class="pc_img">
+            </div>
+    
+    
+    
+<div class="container_p">
+    <form action="" method="POST">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" name="name" placeholder="janani virukshi">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" name="mail" placeholder="youremail@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" name="address" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" name="city" placeholder="panadura">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" name="state" placeholder="sri lanka">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" name="zip" placeholder="61 130">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="img/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" name="crdname" placeholder="mrs.janai virukshi">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" name="crdnumber" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" name="expmounth" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" name="expyear" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" name="cvv" placeholder="123">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" name="submit" value="proceed to checkout" class="submit-btn">
+
+    </form>
+</div>
+</div>  
+     
+
+        
+    
+    
+    
+                
+<!--Footer-->
+<section class="footer">
+    <div class="footer-container container">
+        <h2><br><br>Paradise Cottage.lk<br><h10>Our Home is Your Home</h10></h2>
+        <div class="footer-box">
+            <h3><br><br>Quick links</h3>
+            <a href="#"><i class='bx bx-home-smile' ></i> Agency</a>
+            <a href="category.html"><i class='bx bx-building-house' ></i> Building</a>
+            <a href="#">Rates <i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star' ></i><i class='bx bxs-star-half' ></i></a>
+        </div>
+        <div class="footer-box">
+            <h3><br><br>Locations</h3>
+            <a href="#"><i class='bx bx-location-plus' ></i> Colombo</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Baththramulla</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Mathra</a>
+        </div>
+        <div class="footer-box">
+            <h3><br><br>Contacts</h3>
+            <a href="#"><i class='bx bx-phone-call' ></i>  +94 312 234 476</a>
+            <a href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=CllgCJfrLfwMrDLmwnPbrFlthmVCwdxMblVGvLnnHwMgfMQkBtmsRndqqmGXtNHwCZJWFhHRrcL"><i class='bx bx-envelope' ></i> paradisecottage.lk@gmail.com</a>
+            <div class="social">
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/i/flow/login"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bx-qr'></i></a> 
+            </div>
+        </div>
+    </div>  
+</section>
+
+<!--copyright-->
+    <div class="copyright">
+        <p>&#169; Paradise Cottage.lk All Right Reserved 2022</p>
+    
+    </div>
+    
+    </body>
+</html>
